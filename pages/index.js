@@ -12,11 +12,9 @@ function HomePage(){
             <div className="container">
                 <Image src="/images/goku.jpg" width="400px" height="200px" alt="Goku saying Hi!" className="rounded"/>
             </div>
-            <h1 class="display-4">Olá, bem vindo à Home!</h1>
-            <p class="lead">Bem vindo ao meu site, feito com react, next e bootstrap</p>
+            <h1 class="display-4">Welcome!</h1>
             <hr class="my-4"/>
-            <p>Este projeto foi feito apenas com intuito educacional</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Botão</a>
+            <p class="lead">Welcome to my website made with React, Next and Bootstrap</p>
             </div>
         </center>
     </div>)
