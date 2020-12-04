@@ -11,18 +11,18 @@ export const SidebarData =[
         cName: 'nav-text'
     },
     {
-        title: 'projetos',
+        title: 'projects',
         path: 'projetos',
         icon: <ImIcons.ImBooks/>,
         cName: 'nav-text'
     },{
-        title: 'sobre',
+        title: 'about',
         path: 'sobre',
         icon: <IoIcons.IoMdInformationCircle/>,
         cName: 'nav-text'
     },
     {
-        title: 'comentarios',
+        title: 'comment',
         path: 'comentarios',
         icon: <FaIcons.FaCommentAlt/>,
         cName: 'nav-text'
