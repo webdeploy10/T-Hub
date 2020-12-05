@@ -20,7 +20,7 @@ class HomePage extends Component{
         })
         .then((response)=> {
           //alert(response);
-          console.log(response);
+          //console.log(response);
           this.setState({
               response_t: response.data
           })
