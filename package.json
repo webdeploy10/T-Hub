@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Thiaguinho27/next_webpage#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
