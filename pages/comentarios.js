@@ -18,7 +18,7 @@ class Coment extends Component{
 
     axios({
             method: "post",
-            url: "http://localhost:5000/coment/add",
+            url: "https://t-hub-api.herokuapp.com/coment/add",
             data: this.state,
           })
             .then(function (response) {

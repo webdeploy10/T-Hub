@@ -16,7 +16,7 @@ class HomePage extends Component{
     componentDidMount = () =>{
         axios({
             method: "get",
-            url: "http://localhost:5000/coment/",
+            url: "https://t-hub-api.herokuapp.com/coment/",
         })
         .then((response)=> {
           //alert(response);
