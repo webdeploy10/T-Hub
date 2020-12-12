@@ -20,19 +20,11 @@ class Coment extends Component{
             method: "post",
             url: "https://t-hub-api.herokuapp.com/coment/add",
             data: this.state,
-          })
-            .then(function (response) {
-                console.log("Entrou no then");
-                console.log(response);
+          }).then(function (response) {
               alert(response);
-            })
-            .catch(function (response) {
-                console.log("Entrou no Catch");
-                console.log(response);
+            }).catch(function (response) {
               alert(response);
             });
-            console.log("Teste")
-            alert("Entrou na funcao inserir")
     }
 
     render(){
