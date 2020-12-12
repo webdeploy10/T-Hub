@@ -22,9 +22,13 @@ class Coment extends Component{
             data: this.state,
           })
             .then(function (response) {
+                console.log("Entrou no then");
+                console.log(response);
               alert(response);
             })
             .catch(function (response) {
+                console.log("Entrou no Catch");
+                console.log(response);
               alert(response);
             });
     }
