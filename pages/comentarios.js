@@ -31,6 +31,7 @@ class Coment extends Component{
                 console.log(response);
               alert(response);
             });
+            console.log("Teste")
             alert("Entrou na funcao inserir")
     }
 
