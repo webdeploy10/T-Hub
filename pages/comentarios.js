@@ -17,7 +17,7 @@ class Coment extends Component{
     inserir = () => {
 
     axios({
-            method: "post",
+            method: "POST",
             url: "https://t-hub-api.herokuapp.com/coment/add",
             data: this.state,
           }).then(function (response) {
