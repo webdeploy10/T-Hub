@@ -22,10 +22,10 @@ class Coment extends Component{
             data: this.state,
           })
             .then(function (response) {
-              //alert(response);
+              alert(response);
             })
             .catch(function (response) {
-              //alert(response);
+              alert(response);
             });
     }
 
