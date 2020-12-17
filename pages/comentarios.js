@@ -16,15 +16,22 @@ class Coment extends Component{
 
     inserir = () => {
 
-    axios({
-            method: "POST",
-            url: "https://t-hub-api.herokuapp.com/coment/add",
-            data: this.state,
-          }).then(function (response) {
-              alert(response);
-            }).catch(function (response) {
-              alert(response);
-            });
+    axios.post('https://t-hub-api.herokuapp.com/coment/add',{
+        data: this.state
+    }).then(function(response){
+        alert("Dados inseridos com sucesso");
+    }).catch(function(response){
+        alert("Erro na insercao dos dados")
+    })
+    // axios({
+    //         method: "POST",
+    //         url: "https://t-hub-api.herokuapp.com/coment/add",
+    //         data: this.state,
+    //       }).then(function (response) {
+    //           alert(response);
+    //         }).catch(function (response) {
+    //           alert(response);
+    //         });
     }
 
     render(){
