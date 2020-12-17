@@ -18,7 +18,7 @@ class Coment extends Component{
 
     axios.post('https://t-hub-api.herokuapp.com/coment/add',{
         data: this.state
-    }).then(function(response){
+    },{'content-type': 'application/json'}).then(function(response){
         alert("Dados inseridos com sucesso");
     }).catch(function(response){
         alert("Erro na insercao dos dados")
