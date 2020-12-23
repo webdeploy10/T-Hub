@@ -16,84 +16,88 @@ class Coment extends Component{
     }
 
     componentDidMount(){
+        
         axios({
             method: "GET",
             url: "https://t-hub-api.herokuapp.com/coment/check",
-          }).then(function (response) {
-              if(response === "true")
+          }).then((response) =>{
+              if(response.data ==="true")
               {
-                this.setState({server_res :(<>
+                  this.setState({
+                      server_res: (<>
                 
-                <div className="container">
-                    <div class="jumbotron">
                         <div className="container">
-                        </div>
-                        <h1 class="display-4">Here you can leave a comment to me!</h1>
-                        <hr class="my-4"/>
-                        <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                            <label for="inputEmail4">Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="Name"
-                                onChange={(e)=>{
-                                    this.setState({
-                                        comenter_name: e.target.value,
-                                    })
-                                }}
-                            />
+                            <div class="jumbotron">
+                                <div className="container">
+                                </div>
+                                <h1 class="display-4">Here you can leave a comment to me!</h1>
+                                <hr class="my-4"/>
+                                <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Name</label>
+                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Name"
+                                        onChange={(e)=>{
+                                            this.setState({
+                                                comenter_name: e.target.value,
+                                            })
+                                        }}
+                                    />
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Email</label>
+                                    <input type="email" class="form-control" id="inputPassword4" placeholder="Email"
+                                        onChange={(e)=>{
+                                            this.setState({
+                                                comenter_email: e.target.value,
+                                            })
+                                        }}
+                                    />
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <label for="Comment">Comment</label>
+                                    <textarea className="form-control" id="Comment" placeholder="Your comment goes here"
+                                        onChange={(e)=>{
+                                            this.setState({
+                                                coment: e.target.value,
+                                            })
+                                        }}
+                                    ></textarea>
+                                </div>
+                                <br/>
+                                <button type="submit" class="btn btn-success" onClick={this.inserir}>Send</button>
+                                </form>
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                            <label for="inputPassword4">Email</label>
-                            <input type="email" class="form-control" id="inputPassword4" placeholder="Email"
-                                onChange={(e)=>{
-                                    this.setState({
-                                        comenter_email: e.target.value,
-                                    })
-                                }}
-                            />
-                            </div>
-                        </div>
-                        <div className="form-row">
-                            <label for="Comment">Comment</label>
-                            <textarea className="form-control" id="Comment" placeholder="Your comment goes here"
-                                onChange={(e)=>{
-                                    this.setState({
-                                        coment: e.target.value,
-                                    })
-                                }}
-                            ></textarea>
-                        </div>
-                        <br/>
-                        <button type="submit" class="btn btn-success" onClick={this.inserir}>Send</button>
-                        </form>
-                        </div>
-                    </div>
-                    
-                </>)}
-                )
+                            
+                        </>)
+                  })
               }
               else{
-                this.setState({
-                    server_res: (<>
+                  this.setState({
+                      server_res: (<>
+
                         <div className="container">
                             <div className="jumbotron">
-                                Unfortunately our API isn't working as it was supposed to! Sorry for the inconvenience.
+                                Unfortunately there was a mistake with our API
                             </div>
                         </div>
-                    </>)
-                })
+                      </>)
+                  })
               }
-            }).catch(function (response) {
-                this.setState({
-                    server_res: (<>
-                        <div className="container">
-                            <div className="jumbotron">
-                                Unfortunately our API isn't working as it was supposed to! Sorry for the inconvenience.
-                            </div>
-                        </div>
-                    </>)
-                })
-            });
+          }).catch((response)=>{
+            this.setState({
+                server_res: (<>
+
+                  <div className="container">
+                      <div className="jumbotron">
+                          Unfortunately there was a mistake with our API
+                      </div>
+                  </div>
+                </>)
+            })
+          })
     }
 
     inserir = () => {
