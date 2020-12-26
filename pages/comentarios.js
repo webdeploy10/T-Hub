@@ -72,7 +72,7 @@ class Coment extends Component {
                                         ></textarea>
                                     </div>
                                     <br />
-                                    <button type="submit" class="btn btn-success" onClick={this.inserir}>Send</button>
+                                    <button type="submit" class="btn btn-success" onClick={(e) => { this.inserir(e); }}>Send</button>
                                 </form>
                             </div>
                         </div>
@@ -106,7 +106,8 @@ class Coment extends Component {
         })
     }
 
-    inserir = () => {
+    inserir = (e) => {
+        e.preventDefault();
         axios({
             method: "POST",
             url: "https://t-hub-api.herokuapp.com/coment/add",
