@@ -1,25 +1,79 @@
 import Navbar from "../components/navbar";
 import Header from "../components/headers";
+import axios from 'axios';
+import { React, Component } from "react";
 
-function SobrePage(){
-    return(
-    <div>
-        <title>Projects</title>
-        <Header/>
-        <Navbar/>
-        <br/>
-        <center>
-        <div className="container">
-        <div class="jumbotron">
-            <div className="container">
-            </div>
-            <h1 class="display-4">This page has no content yet</h1>
-            <hr class="my-4"/>
-            <p class="lead">As soon as I have a project I will post it here!</p>
-            </div>
-        </div>
-        </center>
-    </div>)
+class Projects extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            projects: [],
+        }
+    }
+
+    componentDidMount() {
+        axios({
+            method: "get",
+            url: "https://api.github.com/users/thiaguinho27/repos",
+        })
+            .then((response) => {
+
+                var aux = this.state.projects;
+
+
+                response.data.map((value, index) => {
+
+                    if (value.name !== "Thiaguinho27") {
+                        aux.push({
+                            nome: value.name,
+                            link: value.html_url,
+                            descricao: value.description
+                        });
+                    }
+                })
+
+                this.setState({
+                    projects: aux
+                })
+            })
+            .catch((response) => {
+                this.setState({
+                    projects: [{
+                        nome: "There was an error with the API",
+                        link: "#",
+                        descricao: "",
+                    }],
+                })
+            });
+    }
+
+    render() {
+        return (
+            <div>
+                <title>Projects</title>
+                <Header />
+                <Navbar />
+                <br />
+                <center>
+                    <div className="container">
+                        <ul class="list-group">
+                            {this.state.projects.map((value, index) => {
+                                return (
+                                    <>
+                                        <li class="list-group-item"><h2><a style={{ textDecoration: "none", color: "inherit" }} href={value.link}>{value.nome}</a></h2>
+                                            <br />
+                                            {value.descricao}
+                                        </li>
+                                    </>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                </center>
+            </div>)
+    }
 }
 
-export default SobrePage;
+export default Projects;
