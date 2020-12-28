@@ -9,7 +9,10 @@ class HomePage extends Component {
     constructor() {
         super();
         this.state = {
-            response_t: []
+            response_t: [{
+                comenter_name: "T-Hub",
+                coment: "loading....",
+            }]
         }
     }
 
@@ -40,13 +43,13 @@ class HomePage extends Component {
                 <br />
                 <center>
                     <div className="container">
-                        <div class="jumbotron">
+                        <div className="jumbotron">
                             <div className="container">
                                 <img src="/images/goku.jpg" alt="Goku saying Hi!" className="rounded" />
                             </div>
-                            <h1 class="display-4">Welcome!</h1>
-                            <hr class="my-4" />
-                            <p class="lead">Welcome to my website made with React, Next and Bootstrap</p>
+                            <h1 className="display-4">Welcome!</h1>
+                            <hr className="my-4" />
+                            <p className="lead">Welcome to my website made with React, Next and Bootstrap</p>
                         </div>
                     </div>
 
@@ -54,15 +57,14 @@ class HomePage extends Component {
                     {this.state.response_t.map((item, index) => {
                         return (
                             <>
-                                <br />
                                 <div className="container">
-                                    <div class="jumbotron">
+                                    <div className="jumbotron">
 
-                                        <h3 className="float-left">{item.comenter_name} Comented: </h3>
+                                        <h3 className="">{item.comenter_name}: </h3>
                                         <br />
                                         <br />
-                                        <p class="lead float-left">{item.coment}</p>
-                                        <p className="float-right pt-3">{item.createdAt}</p>
+                                        <p className="">{item.coment}</p>
+                                        <p className="">{item.createdAt}</p>
                                     </div>
                                 </div>
                             </>

@@ -113,9 +113,9 @@ class Coment extends Component {
             url: "https://t-hub-api.herokuapp.com/coment/add",
             data: this.state,
         }).then(function (response) {
-            alert(response);
+            alert("Comment successfully added!");
         }).catch(function (response) {
-            alert(response);
+            alert("Error! The comment wasn't added, try again later!");
         });
     }
 

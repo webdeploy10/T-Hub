@@ -9,7 +9,7 @@ class Projects extends Component {
         super();
 
         this.state = {
-            projects: [],
+            projects: [{ nome: "Loading..." }],
         }
     }
 
@@ -20,7 +20,7 @@ class Projects extends Component {
         })
             .then((response) => {
 
-                var aux = this.state.projects;
+                var aux = [];
 
 
                 response.data.map((value, index) => {
