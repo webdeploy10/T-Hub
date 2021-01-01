@@ -44,12 +44,10 @@ class HomePage extends Component {
                 <center>
                     <div className="container">
                         <div className="jumbotron">
-                            <div className="container">
-                                <img src="/images/goku.jpg" alt="Goku saying Hi!" className="rounded" />
-                            </div>
                             <h1 className="display-4">Welcome!</h1>
                             <hr className="my-4" />
-                            <p className="lead">Welcome to my website made with React, Next and Bootstrap</p>
+                            <p className="lead">Welcome to my website made with React, Next and Bootstrap,
+                             my name is Thiago and this is my website. You can navigate through the pages with the sidebar!</p>
                         </div>
                     </div>
 

@@ -27,4 +27,10 @@ export const SidebarData = [
         icon: <FaIcons.FaCommentAlt />,
         cName: 'nav-text'
     },
+    {
+        title: "contact",
+        path: 'contact',
+        icon: <AiIcons.AiFillPhone />,
+        cName: 'nav-text',
+    }
 ]
