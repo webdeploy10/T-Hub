@@ -24,8 +24,13 @@ class HomePage extends Component {
             .then((response) => {
                 //alert(response);
                 //console.log(response);
+                var aux_response = []
+                for (var i = 0; i < response.data.length; i++) {
+                    aux_response[response.data.length - i] = response.data[i];
+                }
+
                 this.setState({
-                    response_t: response.data
+                    response_t: aux_response
                 })
             })
             .catch(function (response) {
