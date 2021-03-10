@@ -85,11 +85,11 @@ class Statistics extends Component {
                 <center>
                     <div className="container">
                         <div className="jumbotron">
-                            <h1 className="display-4">Gráfico de Frequência</h1>
+                            <h1 className="display-4">Frequency Graph</h1>
                             <hr className="my-4" />
                             <div className="container">
                                 <Line
-                                    data={this.getDataForGraph("Acessos")}
+                                    data={this.getDataForGraph("Accesses")}
                                     height={400}
                                     width={600}
                                 />
