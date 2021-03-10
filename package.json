@@ -20,8 +20,10 @@
   "homepage": "https://github.com/Thiaguinho27/next_webpage#readme",
   "dependencies": {
     "axios": "^0.21.0",
+    "chart.js": "^2.9.4",
     "next": "^10.0.3",
     "react": "^17.0.1",
+    "react-chartjs-2": "^2.11.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0"
   }
