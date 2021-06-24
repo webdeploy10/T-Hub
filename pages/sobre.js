@@ -15,9 +15,8 @@ function SobrePage() {
                         </div>
                         <h1 class="display-4">About me!</h1>
                         <hr class="my-4" />
-                        <p class="lead">I'm a programmer who's always looking for something new to learn, I stream sometimes on the purple platform
-            (<a href="https://twitch.tv/thiaguinhodogral">Here it is</a>) where I usually play league of legend, sea of thieves, overwatch, or even program!
-             That's it, in my twitch, you will find links for my steam and my youtube channel, hope you enjoy it!</p>
+                        <p class="lead">Hello, my name is Thiago, I am a computer technician, 
+                        and I am currently studying the course of electrical engineering at the University of São Paulo (USP).</p>
                     </div>
                 </div>
             </center>
