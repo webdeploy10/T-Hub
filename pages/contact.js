@@ -27,8 +27,7 @@ class Contact extends Component {
                 <center>
                     <div className="container">
                         <ul className="list-group">
-                            <a href="https://github.com/thiaguinho27" style={this.state.JSX_CSS}><li className="list-group-item"><AiIcons.AiFillGithub /> GitHub</li></a>
-                            <a href="https://twitch.tv/thiaguinhodogral" style={this.state.JSX_CSS}><li className="list-group-item"><FaIcons.FaTwitch /> Twitch</li></a>
+                            <a href="https://github.com/thiagoneves2" style={this.state.JSX_CSS}><li className="list-group-item"><AiIcons.AiFillGithub /> GitHub</li></a>
                         </ul>
                     </div>
                 </center>
