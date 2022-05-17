@@ -16,7 +16,7 @@ class Projects extends Component {
     componentDidMount() {
         axios({
             method: "get",
-            url: "https://api.github.com/users/thiaguinho27/repos",
+            url: "https://api.github.com/users/thiagoneves2/repos",
         })
             .then((response) => {
 
@@ -25,7 +25,7 @@ class Projects extends Component {
 
                 response.data.map((value, index) => {
 
-                    if (value.name !== "Thiaguinho27") {
+                    if (value.name !== "thiagoneves2") {
                         aux.push({
                             nome: value.name,
                             link: value.html_url,
